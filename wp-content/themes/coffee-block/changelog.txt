@@ -1,0 +1,15 @@
+= 1.4 =
+i)  Compatibility check with WordPress version 6.8
+
+= 1.3 =
+i)  Footer credentials tweaked and Compatibility check with WordPress version 6.7
+
+= 1.2 =
+i)  Removed footer link.
+
+= 1.1 =
+i)   Compatibility with WordPress 6.4
+ii)  Added company footer credits
+
+= 1.0 =
+* Initial version release.
