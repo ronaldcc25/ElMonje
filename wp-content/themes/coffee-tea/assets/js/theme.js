@@ -197,41 +197,94 @@ function coffee_tea_openNav() {
         else sticky.removeClass('fixed-header');
     });
 
-
-  
 });
 
 
 
 // slider
+jQuery(document).ready(function($) {
+    // Initialize the main owl-carousel slider
+    var isRTL = $('html').attr('dir') === 'rtl';
+    var mainSlider = $('#main-slider').owlCarousel({
+        loop: false,
+        margin: 0,
+        nav: true,
+        dots: false,
+        autoplay: false,
+        items: 1,
+        rtl: isRTL
+    });
+
+    // Initialize the abt-cat owl-carousel
+    var isRTL = $('html').attr('dir') === 'rtl';
+    var abtCatSlider = $('.abt-cat').owlCarousel({
+        loop: false,
+        margin: 0,
+        nav: false,
+        dots: false,
+        autoplay: false,
+        items: 5,
+        center: true,
+        rtl: isRTL
+    });
+
+    // Add click event handler to abt-cat slider items
+    $('.abt-cat .item').on('click', function() {
+        var index = $(this).data('slide-index');
+        mainSlider.trigger('to.owl.carousel', [index, 300, true]);
+    });
+
+    // Synchronize abt-cat with main-slider on change
+    function updateActiveClass(currentIndex) {
+        $('.abt-cat .item').removeClass('active-image');
+        $('.abt-cat .item').eq(currentIndex).addClass('active-image');
+    }
+
+    mainSlider.on('changed.owl.carousel', function(event) {
+        var current = event.item.index;
+        updateActiveClass(current);
+    });
+
+    // Initialize active class on load
+    mainSlider.on('initialized.owl.carousel', function(event) {
+        var current = event.item.index;
+        updateActiveClass(current);
+    });
+
+    // Trigger initialization
+    mainSlider.trigger('refresh.owl.carousel');
+});
+
+
+// slider
 jQuery(document).ready(function($){
-  var owl = $('#slider-section .owl-carousel');
-  owl.owlCarousel({
-      margin: 20,
-      nav: false,
-      autoplay: false,
-      lazyLoad: false,
-      autoplayTimeout: 3000,
-      loop: true,
-      dots: false,
-      responsive: {
-          0: {
-              items: 1
-          },
-          600: {
-              items: 1
-          },
-          900: {
-              items: 1
-          },
-          1200: {
-              items: 1
-          }
-      },
-      autoplayHoverPause: true,
-      mouseDrag: true,
-      rtl: $('body').hasClass('rtl') // Check if body has "rtl" class
-  });
+    var owl = $('#slider-section .owl-carousel');
+    owl.owlCarousel({
+        margin: 20,
+        nav: false,
+        autoplay: false,
+        lazyLoad: false,
+        autoplayTimeout: 3000,
+        loop: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            900: {
+                items: 1
+            },
+            1200: {
+                items: 1
+            }
+        },
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        rtl: $('body').hasClass('rtl') // Check if body has "rtl" class
+    });
 });
 
 // product
@@ -252,6 +305,33 @@ $("#product-carousel").owlCarousel({
     1200:{ items:4 }
   }
 });
+});
+
+jQuery('document').ready(function(){
+  var owl = jQuery('#product_cat_slider .owl-carousel');
+    owl.owlCarousel({
+    margin: 20,
+    nav: true,
+    autoplay: true,
+    lazyLoad: false,
+    autoplayTimeout: 3000,
+    loop: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 4
+        },
+        1000: {
+            items: 6
+        }
+    },
+    autoplayHoverPause: true,
+    mouseDrag: true,
+    rtl: jQuery('body').hasClass('rtl') // Check if the body has the class "rtl"
+  });
 });
 
 // product icon

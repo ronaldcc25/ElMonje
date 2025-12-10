@@ -68,6 +68,12 @@ function coffee_tea_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+    // Animations
+    if ( get_theme_mod( 'coffee_tea_animation_enabled', true ) ) {
+        wp_enqueue_script('wow-js', get_theme_file_uri('/assets/js/wow.js'), array('jquery'), null, true);
+        wp_enqueue_style('animate-css', get_template_directory_uri() . '/assets/css/animate.css');
+    }
+
 	// Define a unique handle for your inline stylesheet
 	$handle = 'coffee-tea-style';
 		

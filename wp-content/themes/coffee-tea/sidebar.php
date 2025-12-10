@@ -9,19 +9,19 @@
 	<div class="col-lg-4">
 	    <div class="sidebar">
 	    	 <!-- Add your search widget code here -->
-		    <div class="widget">
+		    <div class="widget wow fadeInUp">
 		        <h4 class="widget-title mb-3"><?php echo esc_html('Search', 'coffee-tea'); ?></h4>
 		        <?php get_search_form(); ?>
 		    </div>
 		    <!-- Add your archive widget code here -->
-            <div class="widget">
+            <div class="widget wow fadeInUp">
                 <h4 class="widget-title"><?php echo esc_html('Archives', 'coffee-tea'); ?></h4>
                 <ul>
                     <?php wp_get_archives(); ?>
                 </ul>
             </div>
             <!-- Add your Categories widget code here -->
-	    	<div class="widget">
+	    	<div class="widget wow fadeInUp">
 			    <h4 class="widget-title "><?php echo esc_html('Categories List' , 'coffee-tea'); ?> </h4>
 				<ul>
 					<?php wp_list_categories(array(
@@ -30,7 +30,7 @@
 				</ul>
 		    </div>
 		    <!-- Add your recent posts widget code here -->
-            <div class="widget">
+            <div class="widget wow fadeInUp">
                 <h4 class="widget-title"><?php echo esc_html('Recent Posts', 'coffee-tea'); ?></h4>
                 <ul>
                     <?php

@@ -59,7 +59,7 @@ if (is_single() && !$coffee_tea_is_single_visible) {
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('blog-item'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('blog-item wow fadeInUp'); ?>>
 	<?php
 		$coffee_tea_post_id = get_the_ID();
 		$coffee_tea_post = get_post($coffee_tea_post_id);

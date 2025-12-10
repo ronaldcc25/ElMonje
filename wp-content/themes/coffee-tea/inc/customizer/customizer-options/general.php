@@ -506,6 +506,54 @@ $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' :
         )
     ); 
 
+	/*=========================================
+	Animation Section
+	=========================================*/
+	$wp_customize->add_section(
+		'coffee_tea_animations_section_setting', array(
+			'title' => esc_html__( 'Animation Options', 'coffee-tea' ),
+			'priority' => 3,
+			'panel' => 'coffee_tea_general',
+		)
+	);
+
+	// Animations Hide/ Show Setting // 
+	$wp_customize->add_setting( 
+		'coffee_tea_animation_enabled' , 
+			array(
+			'default' => true,
+			'sanitize_callback' => 'coffee_tea_sanitize_checkbox',
+			'capability' => 'edit_theme_options',
+		) 
+	);
+	
+	$wp_customize->add_control(
+	'coffee_tea_animation_enabled', 
+		array(
+			'label'	      => esc_html__( 'Hide / Show Animations', 'coffee-tea' ),
+			'section'     => 'coffee_tea_animations_section_setting',
+			'settings'    => 'coffee_tea_animation_enabled',
+			'type'        => 'checkbox'
+		) 
+	);
+
+	$wp_customize->add_setting( 'coffee_tea_upgrade_page_settings_956',
+		array(
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+	$wp_customize->add_control( new Coffee_Tea_Control_Upgrade(
+		$wp_customize, 'coffee_tea_upgrade_page_settings_956',
+			array(
+				'priority'      => 200,
+				'section'       => 'coffee_tea_animations_section_setting',
+				'settings'      => 'coffee_tea_upgrade_page_settings_956',
+				'label'         => __( 'Coffee Tea Pro comes with additional features.', 'coffee-tea' ),
+				'choices'       => array( __( '15+ Ready-Made Sections', 'coffee-tea' ), __( 'One-Click Demo Import', 'coffee-tea' ), __( 'WooCommerce Integrated', 'coffee-tea' ), __( 'Drag & Drop Section Reordering', 'coffee-tea' ),__( 'Advanced Typography Control', 'coffee-tea' ),__( 'Intuitive Customization Options', 'coffee-tea' ),__( '24/7 Support', 'coffee-tea' ), )
+			)
+		)
+	); 
+
 }
 
 add_action( 'customize_register', 'coffee_tea_general_setting' );

@@ -1,4 +1,4 @@
-<header class="main-header">
+<header class="main-header wow fadeInDown" data-wow-delay="0.5s">
     <div class="container headerbox">
         <div class="<?php if( get_theme_mod( 'coffee_tea_sticky_header', '0')) { ?>sticky-header<?php } else { ?>close-sticky<?php } ?>">
             <div class="lower-header-area">

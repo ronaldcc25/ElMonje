@@ -28,7 +28,7 @@ if ($coffee_tea_slider == '1') : ?>
                     <?php while ($coffee_tea_query->have_posts()) : $coffee_tea_query->the_post(); ?>
                         <div class="item">
                             <div class="row">
-                                <div class="col-lg-6 col-md-5 col-12 align-self-center px-3">
+                                <div class="col-lg-6 col-md-5 col-12 align-self-center px-3 wow fadeInRight" data-wow-delay="0.5s">
                                     <div class="sliderimg">
                                         <div class="inner_carousel pe-lg-5">
                                             <?php
@@ -54,7 +54,7 @@ if ($coffee_tea_slider == '1') : ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-7 col-12 slider-img-col align-self-center px-2">
+                                <div class="col-lg-6 col-md-7 col-12 slider-img-col align-self-center px-2 wow fadeInLeft" data-wow-delay="0.5s">
                                     <div class="sliderimg mt-5">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <img src="<?php the_post_thumbnail_url(''); ?>"/>

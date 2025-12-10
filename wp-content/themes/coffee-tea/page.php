@@ -40,7 +40,7 @@ get_header(); ?>
 	                }
 	            ?>
 				<?php 	if( have_posts()) : the_post(); ?>
-					<article class="post-items post-single">
+					<article class="post-items post-single wow fadeInUp">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="post-thumb mb-3"><?php the_post_thumbnail(); ?></div>
 						<?php endif; ?>

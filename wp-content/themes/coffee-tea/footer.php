@@ -25,13 +25,13 @@
 			<?php 
 			} else { ?>
 				<div class="row footer-row">
-					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
 						<aside id="search-3" class="widget widget_search default_footer_search">
 							<h2 class="widget-title w-title"><?php esc_html_e('Search', 'coffee-tea'); ?></h2>
 							<?php get_search_form(); ?>
 						</aside>
 					</div>
-					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
 						<aside id="archives-2" class="widget widget_archive">
 							<h2 class="widget-title w-title"><?php esc_html_e('Recent Posts', 'coffee-tea'); ?></h2>
 							<ul>
@@ -45,7 +45,7 @@
 							</ul>
 						</aside>
 					</div>
-					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.7s">
 						<aside id="pages-2" class="widget widget_pages">
 							<h2 class="widget-title w-title"><?php esc_html_e('Pages', 'coffee-tea'); ?></h2>
 							<ul>
@@ -58,7 +58,7 @@
 							</ul>
 						</aside>
 					</div>
-					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+					<div class="footer-widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.9s">
 						<aside id="categories-2" class="widget widget_categories">
 							<h2 class="widget-title w-title"><?php esc_html_e('Categories', 'coffee-tea'); ?></h2>
 							<ul>
@@ -81,7 +81,7 @@
 	?>
 	<?php $coffee_tea_footer_copyright_setting = get_theme_mod('coffee_tea_footer_copyright_setting','1');
 	 if( $coffee_tea_footer_copyright_setting != ''){?> 
-	<div class="copy-right"> 
+	<div class="copy-right wow flipInX" data-wow-delay="0.5s"> 
 		<div class="container">
 			<p class="copyright-text">
 				<?php

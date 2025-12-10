@@ -8,7 +8,7 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('blog-items'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog-item wow fadeInUp'); ?>>
 	<div class="blog-wrapup">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 			<p class="pt-5"><?php /* translators: %1$s: Link. */ printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'coffee-tea' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>

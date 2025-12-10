@@ -35,7 +35,7 @@ $coffee_tea_related_posts = new WP_Query( $coffee_tea_post_args );
         <div class="row">
             <?php while ( $coffee_tea_related_posts->have_posts() ) : $coffee_tea_related_posts->the_post(); ?>
               <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                <div class="blog-item inner-related-post">
+                <div class="blog-item wow fadeInUp inner-related-post">
                   <?php  
                     the_title(sprintf('<h5 class="post-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h5>');
                   ?>

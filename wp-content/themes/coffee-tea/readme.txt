@@ -4,8 +4,8 @@ Contributors: drakearthur
 Requires at least: 5.5
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 5.6
-Version: 5.6
+Stable tag: 5.9
+Version: 5.9
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, grid-layout, wide-blocks, editor-style, full-width-template, custom-background, custom-colors, custom-header, custom-logo, custom-menu, sticky-post, featured-images, footer-widgets, flexible-header, featured-image-header, post-formats, theme-options, threaded-comments, translation-ready, rtl-language-support, e-commerce, food-and-drink, entertainment
@@ -58,7 +58,17 @@ License: https://github.com/WPTT/webfont-loader/blob/master/LICENSE
 Licensed under: SEE LICENSE IN
 Source: https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
 
-9) Screenshot Image
+9) WOW JS
+Copyright 2016, Matthieu Aussaguel
+LICENSE URL: GPLv3 https://github.com/matthieua/WOW/blob/master/README.md
+SOURCE URL: https://github.com/matthieua/WOW
+
+10) Animate CSS
+Copyright 2021, Daniel Eden
+LICENSE URL: 2.1 https://github.com/animate-css/animate.css/blob/main/LICENSE
+SOURCE URL: https://github.com/animate-css/animate.css
+
+11) Screenshot Image
 
 slider image
 URL: https://pxhere.com/en/photo/297
@@ -96,6 +106,19 @@ Source: https://pxhere.com/
 License: CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+@version 5.9
+* Fixed Minor Issues.
+
+@version 5.8
+* Added Animations.
+* Added Animations On/Off Setting.
+* Added WOW JS Licence & Copyright in Readme.
+* Added Animate CSS Licence & Copyright in Readme.
+* Updated POT File.
+
+@version 5.7
+* Minor bug fixes.
 
 @version 5.6
 * Added New Notice Function.

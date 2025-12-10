@@ -12635,7 +12635,7 @@ _N2.d('NextendBrowse', ['$'], function () {
                         xhr.onerror = function () {
                             reject();
                         };
-                        formData.append('image', files[i]);
+                        formData.append('media', files[i]);
                         formData.append('path', this.currentPath);
                         xhr.send(formData)
                     }).bind(this)));
@@ -38035,10 +38035,12 @@ _N2.d('ComponentAbstract', dependencies, function () {
     };
 
     ItemVimeo.prototype.added = function () {
-        this.needFill = ['vimeourl', 'image'];
+        this.needFill = ['vimeourl', 'image', 'alt', 'playbuttonalt'];
 
         this.generator.registerField('#item_vimeovimeourl');
         this.generator.registerField('#item_vimeoimage');
+        this.generator.registerField('#item_vimeoalt');
+        this.generator.registerField('#item_vimeoplaybuttonalt');
     };
 
     ItemVimeo.prototype.parseAll = function (data) {
@@ -38179,9 +38181,9 @@ _N2.d('ComponentAbstract', dependencies, function () {
     };
 
     ItemYoutube.prototype.added = function () {
-        this.needFill = ['youtubeurl', 'image', 'start'];
+        this.needFill = ['youtubeurl', 'image', 'start', 'alt', 'playbuttonalt'];
 
-        this.generator.registerFields(['#item_youtubeyoutubeurl', '#item_youtubeimage', '#item_youtubestart']);
+        this.generator.registerFields(['#item_youtubeyoutubeurl', '#item_youtubeimage', '#item_youtubestart', '#item_youtubealt', '#item_youtubeplaybuttonalt']);
     };
 
     ItemYoutube.prototype.parseAll = function (data) {
